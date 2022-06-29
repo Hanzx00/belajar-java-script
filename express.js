@@ -18,6 +18,11 @@ app.get("/penjualan", (req, res) => {
     console.log(result);
     //   console.log(fields);
 
+    /**
+     * Code below here
+     * task: tiap total_harga dikurang 100000
+     */
+
     res.status(200).json(result);
   });
 });
@@ -30,6 +35,11 @@ app.get("/pembayaran", (req, res) => {
     console.log(result);
     //   console.log(fields);
 
+    /**
+     * Code below here
+     * task: hanya tampilkan yang is_using_payment_gateway = 1
+     */
+
     res.status(200).json(result);
   });
 });
@@ -38,6 +48,16 @@ app.get("/hello-warga", (req, res) => {
   res.status(201).json({
     result: " hello warga",
   });
+});
+
+app.post("/penjualan", (req, res) => {
+  console.log(req.body);
+  /**
+   * Code below here
+   * task: lakukan insert ke table penjualan dari object req.body
+   */
+
+  res.send("Hello Worldssss!");
 });
 
 app.listen(port, () => {
