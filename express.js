@@ -34,6 +34,12 @@ app.get("/pembayaran", (req, res) => {
   });
 });
 
+app.get("/hello-warga", (req, res) => {
+  res.status(201).json({
+    result: " hello warga",
+  });
+});
+
 app.listen(port, () => {
   console.log(`example app listeng on port ${port}`);
 });
